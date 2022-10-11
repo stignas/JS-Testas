@@ -8,3 +8,29 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+const buttonCalculate = document.getElementById("submit-btn");
+const outputElement = document.getElementById("output");
+
+function converter(e) {
+  e.preventDefault();
+  const child = document.querySelectorAll("p");
+  child.forEach((element) => {
+    element.parentNode.removeChild(element);
+  });
+
+  const kg = document.getElementById("search").value;
+  const lb = kg * 2.2046;
+  const g = kg / 0.001;
+  const oz = kg * 35.274;
+
+  const lbOutput = document.createElement("p");
+  lbOutput.innerText = `${lb.toFixed(3)} lb`;
+  const gOutput = document.createElement("p");
+  gOutput.innerText = `${g.toFixed(0)} g`;
+  const ozOutput = document.createElement("p");
+  ozOutput.innerText = `${oz.toFixed(3)} oz`;
+
+  outputElement.append(lbOutput, gOutput, ozOutput);
+}
+
+buttonCalculate.addEventListener("click", converter);
