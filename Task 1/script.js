@@ -13,10 +13,10 @@ const outputElement = document.getElementById("output");
 
 function converter(e) {
   e.preventDefault();
-  const child = document.querySelectorAll("p");
-  child.forEach((element) => {
-    element.parentNode.removeChild(element);
-  });
+
+  while (outputElement.firstChild) {
+    outputElement.removeChild(outputElement.lastElementChild);
+  }
 
   const kg = document.getElementById("search").value;
   const lb = kg * 2.2046;
