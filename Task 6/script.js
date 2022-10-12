@@ -20,8 +20,6 @@ const users = [
   { id: "9", name: "Daniel Cane", age: 51 },
 ];
 
-// 1. grąžins visų "users" amžiaus visurkį kaip skaičių
-
 function getUserAverageAge(array) {
   const userCount = array.length;
   const sumAge = array.map((e) => e.age).reduce((p, c) => p + c, 0);
@@ -30,12 +28,9 @@ function getUserAverageAge(array) {
   return Number(averageAge.toFixed(0));
 }
 
-console.log(getUserAverageAge(users), typeof getUserAverageAge(users));
-
-// 2. grąžins visų "users" vardus naujame masyve
-
 function getUserNames(array) {
   return array.map((e) => e.name);
 }
 
+console.log(getUserAverageAge(users));
 console.log(getUserNames(users));
