@@ -15,8 +15,8 @@ const outputElement = document.getElementById("output");
 async function getCars() {
   const res = await fetch(ENDPOINT);
   const cars = await res.json();
-  cars.forEach((element) => {
-    generateHTML(element);
+  cars.forEach((car) => {
+    generateHTML(car);
   });
 }
 
