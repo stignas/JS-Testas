@@ -16,14 +16,14 @@ const buttonElement = document.getElementById("btn");
 const outputElement = document.getElementById("output");
 const msgElement = document.getElementById("message");
 
-async function getData() {
+async function getUsers() {
   try {
     const res = await fetch(ENDPOINT);
     if (res.ok) {
       const users = await res.json();
       msgElement.parentNode.removeChild(msgElement);
-      users.forEach((element) => {
-        showData(element);
+      users.forEach((user) => {
+        showUser(user);
       });
     } else {
       throw new Error("Server error.");
@@ -33,7 +33,7 @@ async function getData() {
   }
 }
 
-function showData(user) {
+function showUser(user) {
   const userCard = document.createElement("div");
   userCard.classList.add("user-card");
   const userLogin = document.createElement("p");
@@ -43,10 +43,9 @@ function showData(user) {
   userAvatar.src = `${user.avatar_url}`;
 
   userCard.append(userLogin, userAvatar);
-
   outputElement.appendChild(userCard);
 }
 
 buttonElement.addEventListener("click", () => {
-  getData();
+  getUsers();
 });

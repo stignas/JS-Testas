@@ -61,10 +61,9 @@
 }
 
 #output {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr;
+  min-width: 250px;
 }
 
 .user-card {
@@ -73,11 +72,24 @@
   justify-content: center;
   align-items: center;
   border: dashed 1px black;
-  padding: 1rem;
+  padding: 0.5rem;
   box-shadow: 3px 3px 10px gray;
   margin: 0.5rem 0;
+  overflow: hidden;
 }
 
 div.user-card > img {
-  max-width: 200px;
+  width: 100%;
+}
+
+@media screen and (min-width: 370px) {
+  #output {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #output {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
