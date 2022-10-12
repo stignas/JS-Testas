@@ -20,17 +20,12 @@ const users = [
   { id: "9", name: "Daniel Cane", age: 51, hasDog: true },
 ];
 
-// 1. grąžins "users", kurie turi augintinį.
-
 function filterDogOwers(array) {
   return array.filter((e) => e.hasDog);
 }
 
-// 2. grąžins masyvą su "users", kurie yra pilnamečiai.
-
 function filterAdults(array) {
-  const newArray = [...array.filter((e) => e.age >= 18)];
-  return newArray;
+  return array.filter((e) => e.age >= 18);
 }
 
 console.log(filterDogOwers(users));
