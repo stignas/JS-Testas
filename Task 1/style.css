@@ -52,18 +52,6 @@ form {
   color: #fff;
 }
 
-/* Tablet */
-@media screen and (min-width: 768px) {
-  .headline {
-    font-size: 3.5em;
-  }
-
-  #search,
-  #submit-btn {
-    font-size: 2em;
-  }
-}
-
 #output {
   text-align: center;
   font-size: 2rem;
@@ -74,4 +62,16 @@ div#output > p {
   box-shadow: 3px 3px 10px white;
   width: 30%;
   margin: 0 auto;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .headline {
+    font-size: 3.5em;
+  }
+
+  #search,
+  #submit-btn {
+    font-size: 2em;
+  }
 }
