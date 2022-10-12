@@ -11,7 +11,7 @@ function Calculator() {
     return a + b;
   };
 
-  this.substraction = function (a, b) {
+  this.subtraction = function (a, b) {
     return a - b;
   };
 
@@ -27,6 +27,6 @@ function Calculator() {
 const skaiciuotuvas = new Calculator();
 
 console.log(skaiciuotuvas.sum(5, 6));
-console.log(skaiciuotuvas.substraction(50, 14));
+console.log(skaiciuotuvas.subtraction(50, 14));
 console.log(skaiciuotuvas.multiplication(6, 7));
 console.log(skaiciuotuvas.division(60, 5));
