@@ -22,12 +22,12 @@ class Movie {
   }
 }
 
-const matrica = new Movie("The Matrix", "Wachowski Bros.", 63000000);
+const matrix = new Movie("The Matrix", "Wachowski Bros.", 63000000);
 const pirates = new Movie(
   "Pirates of the Caribbean: The Curse of the Black Pearl",
   "Gore Verbinski",
   140000000
 );
 
-console.log(matrica.wasExpensive());
+console.log(matrix.wasExpensive());
 console.log(pirates.wasExpensive());
